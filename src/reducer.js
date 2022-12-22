@@ -8,6 +8,15 @@ function changeState(state, action) {
 }
 
 let state = { count: 0 };
-let action = { type: "counter/increment" };
+ function render(){
+  document.body.textContent = state.count;
+ }
+ function dispatch(action){
+  state = changeState(state, action);
+  render();
+ }
 
-changeState(state, action);
+//  render()
+// let action = { type: "counter/increment" };
+
+// changeState(state, action);
